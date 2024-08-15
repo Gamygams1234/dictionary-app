@@ -1,0 +1,534 @@
+$black: #050505;
+$dark-gray: #1f1f1f;
+$gray: #2d2d2d;
+$light-gray: #3a3a3a;
+$medium-gray: #757575;
+$light-gray-2: #e9e9e9;
+$lighter-gray: #f4f4f4;
+$white: #ffffff;
+$purple: #a445ed;
+$red: #ff5252;
+
+/* Loader */
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: $purple;
+  }
+  25% {
+    stroke: $purple;
+  }
+  50% {
+    stroke: $purple;
+  }
+  75% {
+    stroke: $purple;
+  }
+  100% {
+    stroke: $purple;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+
+.play-button {
+  cursor: pointer;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+.mb-4 {
+  margin-bottom: 4rem;
+}
+.mb-5 {
+  margin-bottom: 5rem;
+}
+// Background color classes
+.bg-black {
+  background-color: $black;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-dark-gray {
+  background-color: $dark-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-gray {
+  background-color: $gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-light-gray {
+  background-color: $light-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-medium-gray {
+  background-color: $medium-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-light-gray-2 {
+  background-color: $light-gray-2;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-lighter-gray {
+  background-color: $lighter-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-white {
+  background-color: $white;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-purple {
+  background-color: $purple;
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-red {
+  background-color: $red;
+  transition: all 0.2s ease-in-out;
+}
+
+// Text color classes
+.text-black {
+  color: $black;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-dark-gray {
+  color: $dark-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-gray {
+  color: $gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-light-gray {
+  color: $light-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-medium-gray {
+  color: $medium-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-light-gray-2 {
+  color: $light-gray-2;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-lighter-gray {
+  color: $lighter-gray;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-white {
+  color: $white;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-purple {
+  color: $purple;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-red {
+  color: $red;
+  transition: all 0.2s ease-in-out;
+}
+
+// this is the font
+
+$font-sans-serif: "Inter", sans-serif;
+$font-serif: "Lora", serif;
+$font-mono: "Inconsolata", monospace;
+
+.serif {
+  font-family: $font-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.sans-serif {
+  font-family: $font-sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.monospace {
+  font-family: $font-mono;
+  transition: all 0.2s ease-in-out;
+}
+
+// slider
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme-label {
+  margin: 0 0 0 1em;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $purple;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: $purple;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+//   fornt theme
+
+.App {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: $white;
+  transition: all 0.2s ease-in-out;
+  min-height: 100dvh;
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .loader{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+      display: flex;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      align-items: center;
+      .divider {
+        width: 1px;
+        height: 24px; /* Adjust height as needed */
+        background-color: $medium-gray; /* Adjust color as needed */
+        margin: 0 1.5rem;
+      }
+      .logo {
+        flex-grow: 1;
+      }
+      .font-selector-container {
+        position: relative;
+        display: inline-block;
+        text-align: right;
+        display: flex;
+        align-items: center;
+      }
+
+      .font-selector {
+        appearance: none;
+        overflow: hidden;
+        border: 0 solid;
+        font-weight: 600;
+        font-size: 16px;
+        padding-right: 2rem;
+        text-align: right;
+
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background: url("./assets/images/icon-arrow-down.svg") no-repeat right;
+      }
+
+      .font-selector:focus {
+        outline: none;
+        border-color: #a445ed; /* Focus state border color */
+      }
+
+      .font-selector option {
+        background-color: #ffffff; /* Background color for options */
+        color: #2d2d2d; /* Text color for options */
+        font-weight: 400; /* Make options have the same font weight */
+        padding: 10px 12px;
+      }
+
+      /* Option hover state */
+      .font-selector option:hover {
+        background-color: #f4f4f4; /* Option hover state background */
+      }
+
+      /* Option selected state */
+      .font-selector option:checked {
+        background-color: #a445ed;
+        color: #ffffff;
+      }
+    }
+
+    // the form
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      background-color: $lighter-gray; /* Background color similar to the one in the image */
+      border-radius: 8px; /* Rounded corners */
+      padding: 10px;
+
+      width: 100%;
+      margin: 0 auto; /* Center align */
+      margin-bottom: 1rem;
+      border: 2px solid transparent; /* Default border */
+      transition: 0.2s all ease-in-out;
+    }
+
+    .search-input {
+      border: none;
+      background: none;
+      outline: none;
+      flex: 1;
+      padding-left: 10px;
+      font-size: 16px;
+      color: $black;
+      font-weight: 600;
+      transition: 0.2s all ease-in-out;
+    }
+
+    .search-input:focus {
+      border: none;
+      outline: none;
+    }
+
+    .search-form:focus-within {
+      border-color: $purple; /* Purple border on focus */
+    }
+    .warning{
+        .search-form{
+            border-color: $red;
+        }
+    }
+
+    #warning-message{
+        height: 2rem;
+        color: #ff5252;
+    }
+
+    .search-button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $purple; /* Color of the search icon */
+      padding-right: 10px;
+    }
+
+    .search-button:hover {
+      color: $purple; /* Change color on hover */
+    }
+
+    .no-definitions-found {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.5;
+      .emoji {
+        font-size: 4rem;
+      }
+    }
+    .definition-container {
+
+      border-radius: 8px;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .word {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      .phonetic {
+        font-style: italic;
+      }
+
+      .meaning-section {
+        margin-top: 1.5em;
+      }
+
+      .part-of-speech {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .definitions {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 0.75em; // Space between list items
+        position: relative;
+
+        line-height: 1.5;
+        margin-left: 1.5em; // Adjust as needed
+        &::before {
+          content: "•"; // Custom bullet symbol
+          color: $purple; // Use your color variable for the bullet
+          font-weight: bold;
+          margin-right: 1em; // Space between bullet and text
+          position: absolute;
+          left: -1.25em; // Adjust position based on your layout
+          top: 0;
+        }
+      }
+
+      .example {
+        font-style: italic;
+      }
+
+      .synonyms {
+        margin-top: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        .space {
+          margin-right: 0.5rem;
+        }
+        strong {
+          margin-right: 0.5rem;
+        }
+        .synonym {
+          cursor: pointer;
+        }
+        .synonym:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .source {
+        margin-top: 2em;
+        font-size: 0.9em;
+      }
+
+      .source a {
+        color: $medium-gray;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  background-color: $black;
+
+  .bg-white {
+    background-color: $black;
+  }
+  .text-black {
+    color: $white;
+  }
+  .container {
+    // the form
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      background-color: $dark-gray; /* Background color similar to the one in the image */
+
+    }
+
+    .search-input {
+      color: $white;
+    }
+
+    .search-button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $purple; /* Color of the search icon */
+      padding-right: 10px;
+    }
+
+    .search-button:hover {
+      color: $purple; /* Change color on hover */
+    }
+  }
+}
